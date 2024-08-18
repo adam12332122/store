@@ -1,55 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-	<meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أبو حذيفة الأنصاري</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	<style type="text/css"> #website 
-  #q {
-color: black;
-font-size: 35px;
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+            color: white;
+            text-align: center;
+        }
 
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
+        h1 {
+            margin-bottom: 50px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
 
-  }
-#adam {
-	color: red;
-	font-size:20px;
-}
-#w {
-	font-size: 30px;
-}
-#r {
-	color: black;
-	font-size: 22px;
-}
+        .circles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 80%;
+        }
 
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
 
+        .circle:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.4);
+        }
 
+        @media (max-width: 768px) {
+            .circle {
+                width: 90px;
+                height: 90px;
+                font-size: 1em;
+            }
+        }
 
-
-	</style>
-	<title>adam</title>
+        @media (max-width: 480px) {
+            .circle {
+                width: 70px;
+                height: 70px;
+                font-size: 0.8em;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
-
 <body>
-<div id="q">
-	<h1>
-	welcome in site
-</h1>
-</div>
-
-<div id="adam">
-تحميل واتساب للكمبيوتر  <div id="r"><p>64 bit or 32 bit</p></div>
-</div>
-<div id="w">
-	<p>
-	<a href="https://web.whatsapp.com/desktop/windows/release/x64/WhatsAppSetup.exe">64 bit</a>
-</p>
-<p>
-	<a href="https://web.whatsapp.com/desktop/windows/release/ia32/WhatsAppSetup.exe">32 bit</a>
-</p>
-</div>
-
+    <div class="container">
+        <h1>أبو حذيفة الأنصاري</h1>
+        <div class="circles">
+            <div class="circle" onclick="goToLink(1)">الدائرة 1</div>
+            <div class="circle" onclick="goToLink(2)">الدائرة 2</div>
+            <div class="circle" onclick="goToLink(3)">الدائرة 3</div>
+            <div class="circle" onclick="goToLink(4)">الدائرة 4</div>
+            <div class="circle" onclick="goToLink(5)">الدائرة 5</div>
+        </div>
+    </div>
+    <script>
+        function goToLink(circleNumber) {
+            switch(circleNumber) {
+                case 1:
+                    window.location.href = "https://link1.com";
+                    break;
+                case 2:
+                    window.location.href = "https://link2.com";
+                    break;
+                case 3:
+                    window.location.href = "https://link3.com";
+                    break;
+                case 4:
+                    window.location.href = "https://link4.com";
+                    break;
+                case 5:
+                    window.location.href = "https://link5.com";
+                    break;
+                default:
+                    alert("رابط غير موجود!");
+            }
+        }
+    </script>
 </body>
-
 </html>
